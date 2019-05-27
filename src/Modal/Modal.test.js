@@ -2,9 +2,6 @@ import React from "react";
 import { mount } from "enzyme";
 import Modal from "./Modal";
 import { Modal as ModalBoot } from "react-bootstrap";
-import Header from "./Header";
-import Body from "./Body";
-import Footer from "./Footer";
 import setupTests from "../setupTests";
 
 describe("<Modal />", () => {

@@ -8,8 +8,8 @@ export default class Choice extends Component {
     return (
       <div>
         <App />
-        <First />
-        <Second />
+        {/* <First /> */}
+        {/* <Second /> */}
       </div>
     );
   }
