@@ -2,65 +2,65 @@
 
 This is a simple App to have a quick and customisable modal
 
-### Exemples
+## Exemples
 
-Easy mode :
+1.  **Simple use**
 
-#### `<Modal title={{ text: "title" }} bodyText="something" />`
+    `<Modal title={{ text: "title" }} bodyText="something" />`
 
-### `npm test`
+![exempl-1](https://raw.githubusercontent.com/veensy/Modal-Simple/master/public/images/modal-1.png)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2.  **Simple Custom**
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+        `<Modal
+    	    open={{ text:  "Open me", className:  "open", variant:  "secondary" }}
+    		title={{ text:  "title" }}
+    		closeBtn={{ show:  false }}
+    	>
+    	<strong>test 2</strong>
+    	<Modal.Footer
+    		validate={{
+    			text:  "Validate",
+    			variant:  "primary"
+    			}}
+    	/>
+    </Modal>`
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+![exemple-2](https://raw.githubusercontent.com/veensy/Modal-Simple/master/public/images/modal-2.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3.  **Hard custom**
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-# Modal-Simple
+`<Modal
+    show={this.state.show}
+    onHide={this.modalState}
+    title={{ text: "title", className: "title" }}
+    closeBtn={{ show: true, className: "btn-close" }}
+    className={{
+        modal: "modal-block-App",
+        header: "header-block",
+        body: "body-block",
+        footer: "footer-block"
+    }}
+>
+<Modal.Body>
+    <div className="d-flex flex-row body-block">
+        <img src={logo} alt="logo" />
+        <img src={logo} alt="logo" />
+        test
+    </div>
+</Modal.Body>
+<Modal.Footer
+    validate={{
+        text: "Validate",
+        action: this.modalState,
+        className: "btn-valid"
+    }}
+    cancel={{
+        text: "Close",
+        action: this.modalState,
+        className: "btn-cancel"
+    }}
+/>
+</Modal>`
+![exemple-3](https://raw.githubusercontent.com/veensy/Modal-Simple/master/public/images/modal-3.png)
