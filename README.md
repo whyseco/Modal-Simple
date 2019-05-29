@@ -1,6 +1,7 @@
 ## Modal-Simple
 
-This is a simple App to have a quick and customisable modal
+This is a simple quick and customizable modal component that you can use in your App.
+The modal is based on bootstrap.
 
 ## Exemples
 
