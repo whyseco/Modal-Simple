@@ -99,4 +99,8 @@ This is a simple App to have a quick and customisable modal
 | ------------- |:-------------:|:--------:|----------------------------: |
 | show          | boolean       | false    | When true the modal will<br>show itself. |
 | onHide        | function      |          | A callback fired when the<br>header closeButton or <br>non-static backdrop is <br>clicked. Required if either<br> specified.   |
-| title         | object        | text && className | Specify the header<br> title and className|
+| title         | object        | text: String <br>className: String | Specify the header<br> title and className.|
+| closeBtn | object | show : Boolean <br>className : String | Specify if you need the <br> close button appear <br>and apply a class. |
+| className | object | modal: String<br>header: String<br>body: String<br>footer: String<br>|Add a className to each<br> part to be able to <br>custom them.|
+| footer | boolean | true | if you don't want<br> the block footer appear<br> set it to false.|
+| open | object | text: String <br>className: String<br>variant: String | You can custom the provide<br> button by your own text<br> and style. |
