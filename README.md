@@ -14,23 +14,20 @@ This is a simple App to have a quick and customisable modal
 2.  **Simple Custom**
 
     ```
-    <Modal 
-        open = {{ 
-            text: "Open me", 
-            className: "open", 
-            variant: "secondary" 
-            }} 
-        title = {{ text: "title" }} 
+    <Modal
+        open = {{
+            text: "Open me",
+            className: "open",
+            variant: "secondary"
+            }}
+        title = {{ text: "title" }}
         closeBtn = {{ show: false }}
     >
 
     <strong>test 2</strong>
 
-    <Modal.Footer 
-        validate = {{ 
-            text: "Validate", 
-            variant: "primary" 
-            }} 
+    <Modal.Footer
+        validate = {{ text: "Validate", variant: "primary" }}
     />
     </Modal>
     ```
@@ -39,35 +36,40 @@ This is a simple App to have a quick and customisable modal
 
 3.  **Hard custom**
 
-        `<Modal`
-        `show={this.state.show}`
+    ```
+    <Modal
+        show = {this.state.show}
+        onHide = {this.modalState}
+        title = {{ text: "title", className: "title" }}
+        closeBtn = {{ show: true, className: "btn-close" }}
+        className = {{
+            modal: "modal-block-App", 
+            header: "header-block",
+            body: "body-block",  
+            footer: "footer-block"
+        }}
+    >
+        <Modal.Body>
+            <div className="d-flex flex-row body-block">
+                <img src={"logo"} alt="logo"/>  
+                <img src={"logo"} alt="logo"/>
+                test
+            </div>
+        </Modal.Body>
 
-    `onHide={this.modalState}`
-    `title={{ text: "title", className: "title" }}`
-    `closeBtn={{ show: true, className: "btn-close" }}`
-    `className={{`
-    `` `modal: "modal-block-App",` `` `header: "header-block",`
-    `` `body: "body-block",` `` `footer: "footer-block"`
-    `}}`
-    `>`
-
-        `<Modal.Body>`
-
-    `<div className="d-flex flex-row body-block">`
-    `` `<img src={"logo"} alt="logo"/>` `` `<img src={"logo"} alt="logo"/>`
-    `` `test`
-    `</div>`
-    `</Modal.Body>`
-
-        `<Modal.Footer`
-
-    `validate={{`
-    `` `text: "Validate",` `` `action: this.modalState,`
-    `` `className: "btn-valid"` `}}` `cancel={{` `` `text: "Close",`
-    `` `action: this.modalState,` `` `className: "btn-cancel"`
-    `}}`
-    `/>`
-
-        `</Modal>`
+        <Modal.Footer
+            validate = {{
+                text: "Validate",  
+                action: this.modalState,
+                className: "btn-valid" 
+            }} 
+            cancel = {{
+                text: "Close",
+                action: this.modalState,  
+                className: "btn-cancel"
+            }}
+        />
+    </Modal>
+    ```
 
 ![exemple-3](https://raw.githubusercontent.com/veensy/Modal-Simple/master/public/images/modal-3.png)
