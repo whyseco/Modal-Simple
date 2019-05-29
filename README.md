@@ -98,8 +98,7 @@ This is a simple App to have a quick and customisable modal
 | Name          | Type          | Default  | Description                |
 | ------------- |:-------------:|:--------:|---------------------------:|
 | show          | boolean       | false    | When true the modal will   |
-|               |               |          | show itself                |
-|               |               |          |                            |
+                                             show itself                
 |onHide         | function      |          | A callback fired when the  |
 |               |               |          | header closeButton or      |
 |               |               |          | non-static backdrop is     |
