@@ -95,8 +95,8 @@ This is a simple App to have a quick and customisable modal
 
  **Modal**
 
-| Name          | Type          | Default  | Description                  |
-| ------------- |:-------------:|:--------:|----------------------------: |
+| Name           | Type          | Default  | Description                  |
+|: -------------:|:-------------:|:--------:|:----------------------------: |
 | show          | boolean       | false    | When true the modal will<br>show itself. |
 | onHide        | function      |          | A callback fired when the<br>header closeButton or <br>non-static backdrop is <br>clicked. Required if either<br> specified.   |
 | title         | object        | text: string <br>className: string | Specify the header<br> title and className.|
@@ -106,8 +106,8 @@ This is a simple App to have a quick and customisable modal
 | open | object | text: string <br>className: string<br>variant: string | You can custom the provide<br> button by your own text<br> and style. |
 
  **Modal.Footer**
- 
+
 | Name          | Type          | Default  | Description                  |
-| ------------- |:-------------:|:--------:|----------------------------: |
+|:-------------:|:-------------:|:--------:|:----------------------------: |
 | validate| object|text: string<br> action: function<br>className:string<br>variant:string|You can custom the provide<br> button by your own text<br> and style.|
 |cancel|object|text: string<br> action: function<br>className:string<br>variant:string|You can custom the provide<br> button by your own text<br> and style.|
