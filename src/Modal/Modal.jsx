@@ -12,7 +12,6 @@ class Modal extends Component {
   static Body = Body;
   static Footer = Footer;
   state = { show: false };
-
   renderToggle = () => {
     if (typeof this.props.show === "undefined") {
       return (
@@ -29,24 +28,21 @@ class Modal extends Component {
   handleShow = () => {
     this.setState({ show: !this.state.show });
   };
-
-  render() {
-    let bodyContent;
-    let content;
-    let footerContent;
+  getProps = () => {
+    let render = {};
     if (this.props.children && this.props.children.length) {
       this.props.children.map((child, idx) => {
         switch (typeof child.type) {
           case "function":
             if (child.type.displayName.name === "Body") {
-              bodyContent = child;
+              render.bodyContent = child;
             } else if (child.type.displayName.name === "Footer") {
-              footerContent =
+              render.footerContent =
                 child || (this.props.cancel && this.props.validate);
             }
             break;
           default:
-            content = child;
+            render.content = child;
             break;
         }
       });
@@ -55,19 +51,23 @@ class Modal extends Component {
         switch (typeof this.props.children.type) {
           case "function":
             if (this.props.children.type.displayName.name === "Body") {
-              bodyContent = this.props.children;
+              render.bodyContent = this.props.children;
             } else if (this.props.children.type.displayName.name === "Footer") {
-              footerContent =
+              render.footerContent =
                 this.props.children ||
                 (this.props.cancel && this.props.validate);
             }
             break;
           default:
-            content = this.props.children;
+            render.content = this.props.children;
             break;
         }
       }
     }
+    return render;
+  };
+  render() {
+    const render = this.getProps();
     return (
       <div>
         {this.renderToggle()}
@@ -92,23 +92,23 @@ class Modal extends Component {
             />
           )}
 
-          {(content || bodyContent || this.props.bodyText) && (
+          {(render.content || this.props.bodyText) && (
             <Body
               className={this.props.className.body}
-              content={content || this.props.bodyText}
-            >
-              {bodyContent}
-            </Body>
+              content={render.content || this.props.bodyText}
+            />
           )}
+          {render.bodyContent}
 
-          {(footerContent || this.props.footer) && (
+          {(render.footerContent || this.props.footer) && (
             <Footer
               footer={this.props.footer}
               onHide={this.props.onHide || this.handleShow}
               className={this.props.className.footer}
-            >
-              {footerContent ? footerContent.props : null}
-            </Footer>
+              footerContent={
+                render.footerContent ? render.footerContent.props : null
+              }
+            />
           )}
         </ModalBoot>
       </div>

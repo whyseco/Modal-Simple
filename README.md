@@ -64,8 +64,8 @@ The modal is based on bootstrap.
             >
                 <Modal.Body>
                     <div className="d-flex flex-row body-block">
-                        <img src={"logo"} alt="logo"/>  
-                        <img src={"logo"} alt="logo"/>
+                        <img src={logo} alt="logo"/>  
+                        <img src={logo} alt="logo"/>
                         test
                     </div>
                 </Modal.Body>

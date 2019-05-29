@@ -11,21 +11,21 @@ class Footer extends Component {
   renderButtons = () => {
     var cancel;
     var validate;
-    if (!this.props.children) {
+    if (!this.props.footerContent) {
       cancel = this.props.cancel;
       validate = this.props.validate;
       return this.showButtons(cancel, validate);
     }
-    if (this.props.children.cancel || this.props.children.validate) {
-      if (this.props.children.cancel.defaultProp) {
+    if (this.props.footerContent.cancel || this.props.footerContent.validate) {
+      if (this.props.footerContent.cancel.defaultProp) {
         cancel = false;
       } else {
-        cancel = this.props.children.cancel;
+        cancel = this.props.footerContent.cancel;
       }
-      if (this.props.children.validate.defaultProp) {
+      if (this.props.footerContent.validate.defaultProp) {
         validate = false;
       } else {
-        validate = this.props.children.validate;
+        validate = this.props.footerContent.validate;
       }
 
       return this.showButtons(cancel, validate);

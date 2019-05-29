@@ -7,16 +7,13 @@ export default class Body extends Component {
   };
 
   renderContent = () => {
-    if (this.props.children) {
-      return this.props.children;
-    }
     if (this.props.content) {
       return (
         <ModalBoot.Body className={this.props.className}>
           {this.props.content}
         </ModalBoot.Body>
       );
-    }
+    } else return this.props.children;
   };
   render() {
     return this.renderContent();
