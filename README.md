@@ -9,10 +9,10 @@ The modal is based on bootstrap.
     npm i modal-simple react-bootstrap bootstrap
 ```
 
-and don't forget to add in public/index.html :
+and don't forget to add the bootstrap's stylesheet `<link>` into your `<head>` before all other stylesheets to load CSS :
 
 ```html
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    [LINK TO BOOTSTRAP STYLESHEET](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
 ```
 
 ## Exemples
