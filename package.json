@@ -1,39 +1,54 @@
 {
-  "name": "modal",
-  "version": "0.1.0",
-  "private": true,
+  "name": "modal-simple",
+  "version": "1.0.0",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "node-sass": "^4.12.0",
-    "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.8",
-    "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
-    "sinon": "^7.3.2"
+    "webpack": "^4.32.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch",
+    "build": "webpack"
   },
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
     "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.13.1"
-  }
+    "enzyme-adapter-react-16": "^1.13.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "webpack-cli": "^3.3.2"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "description": "This is a simple quick and customizable modal component that you can use in your App. The modal is based on bootstrap.",
+  "main": "build/Modal.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veensy/Modal-Simple.git"
+  },
+  "keywords": [
+    "react",
+    "bootstrap",
+    "simple",
+    "modal",
+    "dialog"
+  ],
+  "author": "“Belvilus <“veensy@gmail.com”>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/veensy/Modal-Simple/issues"
+  },
+  "homepage": "https://github.com/veensy/Modal-Simple#readme"
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { mount } from "enzyme";
 import Modal from "./Modal";
 import { Modal as ModalBoot } from "react-bootstrap";
-import setupTests from "../setupTests";
+import setupTests from "./setupTests";
 
 describe("<Modal />", () => {
   let wrapper;

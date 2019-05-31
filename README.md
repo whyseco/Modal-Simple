@@ -3,6 +3,15 @@
 This is a simple quick and customizable modal component that you can use in your App.
 The modal is based on bootstrap. 
 
+## Installation
+```
+    npm i modal-simple react-bootstrap bootstrap
+```
+and don't forget to add in public/index.html :
+
+    ```javascript
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    ```
 ## Exemples
 
 1.  **Simple use**

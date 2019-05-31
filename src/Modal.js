@@ -1,8 +1,8 @@
 /* eslint-disable array-callback-return */
 import React, { Component } from "react";
-import Header from "./Header";
-import Body from "./Body";
-import Footer from "./Footer";
+import Header from "./Modal/Header";
+import Body from "./Modal/Body";
+import Footer from "./Modal/Footer";
 import { Modal as ModalBoot } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import PropTypes from "prop-types";

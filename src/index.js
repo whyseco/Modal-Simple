@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import Choice from './Choice';
+import Choice from './Exemples/Choice';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<Choice />, document.getElementById('root'));
