@@ -11,9 +11,7 @@ The modal is based on bootstrap.
 
 and don't forget to add the bootstrap's stylesheet `<link>` into your `<head>` before all other stylesheets to load CSS :
 
-
-    [LINK TO BOOTSTRAP STYLESHEET](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
-
+[LINK TO BOOTSTRAP STYLESHEET](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
 
 ## Exemples
 
