@@ -27,7 +27,7 @@ function Introduction(){
                         <h4>Install with npm or yarn : </h4>
                             
                         <code> npm i modal-simple react-bootstrap bootstrap</code><br/> 
-                        or
+                        or<br/>
                         <code> yarn add modal-simple react-bootstrap bootstrap</code>
 
                     
