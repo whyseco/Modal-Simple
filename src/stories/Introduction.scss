@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
+
+.started{
+    font-family: 'Abel', sans-serif;
+    code{
+        margin: 30px 0 30px 30px;
+        padding: 8px;
+        font-size: 85%;
+        background-color: #f6f8fa;
+        border-radius: 3px;
+    }
+    .welcome{
+        text-align:center;
+        .title{
+            margin-bottom:40px;
+        }
+    }
+    .paragraph{
+        margin-left:50px;
+        margin-bottom:40px;
+        .content{
+            margin:40px 0px 40px 30px;
+           
+        }
+    }
+    .introduction{
+       
+        .link a{
+            color: #0366d6;
+            text-decoration: none; 
+        }
+    }
+    .installation{
+     
+    }
+
+}
