@@ -18,15 +18,23 @@ module.exports = {
             presets: ["@babel/preset-env"]
           }
         }
+      },
+      {
+        test: /\.txt$/i,
+        use: "raw-loader"
+      },
+      {
+        test: /\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"]
       }
     ]
   },
   externals: {
-    react: "react",
+    react: "react"
   },
   resolve: {
     alias: {
-      react: path.resolve("./node_modules/react"),
+      react: path.resolve("./node_modules/react")
     }
   }
 };

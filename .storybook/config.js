@@ -1,5 +1,8 @@
-import { configure, addParameters } from "@storybook/react";
+import { configure, addParameters, setAddon } from "@storybook/react";
+import JSXAddon from "storybook-addon-jsx";
 import "bootstrap/dist/css/bootstrap.css";
+
+setAddon(JSXAddon);
 
 addParameters({
   options: {

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { storiesOf } from "@storybook/react";
+import { storiesOf, setAddon } from "@storybook/react";
 import { withKnobs, boolean, text } from "@storybook/addon-knobs";
 import { withInfo } from "@storybook/addon-info";
 
@@ -175,7 +175,6 @@ Modal.Header.displayName = "Modal.Header";
 Modal.Body.displayName = "Modal.Body";
 Modal.Footer.displayName = "Modal.Footer";
 
-
 const store = new Store({
   show: false
 });
@@ -188,14 +187,22 @@ storiesOf("Modal", module)
       propTablesExclude: [State]
     })
   )
-  .add("Simple use", () => (
-    <Modal
-      title={{ text: text("The text in the header ", "title") }}
-      bodyText={text("The text in the body", "some text here")}
-      footer={boolean("Send false if you don't need a footer", true)}
-    />
-  ))
-  .add("Simple custom", () => (
+  .addWithJSX(
+    "Simple use",
+    () => (
+      <Modal
+        title={{ text: text("The text in the header ", "title") }}
+        bodyText={text("The text in the body", "some text here")}
+        footer={boolean("Send false if you don't need a footer", true)}
+      />
+    ),
+    {
+      props: {
+        propDefinitions:["Test","string"]
+      }
+    }
+  )
+  .addWithJSX("Simple custom", () => (
     <Modal
       open={{
         text: text("The text inside the button ", "Open me"),
@@ -227,7 +234,7 @@ storiesOf("Modal", module)
       />
     </Modal>
   ))
-  .add("Hard custom", () => (
+  .addWithJSX("Hard custom", () => (
     <div>
       <button
         className="open"
