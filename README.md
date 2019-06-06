@@ -19,7 +19,7 @@ and don't forget to add the bootstrap's stylesheet `<link>` into your `<head>` b
 
 <a href="https://codesandbox.io/s/modalsimple-dsm09 "><img src="https://codesandbox.io/static/img/play-codesandbox.svg" alt="codesandbox"/></a>
 
-<p>or use our :</p><a href="https://veensy.github.io/Modal-Simple/?path=/story/modal--simple-use"><img src="https://storybook.js.org/images/logos/logo-storybook.svg" alt="storybook"/></a>
+<p>or use our :</p><a href="https://veensy.github.io/Modal-Simple/"><img src="https://storybook.js.org/images/logos/logo-storybook.svg" alt="storybook"/></a>
 
 ## Examples
 
