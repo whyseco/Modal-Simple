@@ -1,10 +1,14 @@
 {
   "name": "modal-simple",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "dependencies": {
+    "@sambego/storybook-state": "^1.3.4",
+    "@storybook/addon-knobs": "^5.0.11",
+    "@storybook/addon-options": "^5.0.11",
     "core-js": "^3.1.3",
     "node-sass": "^4.12.0",
     "react-scripts": "3.0.1",
+    "storybook-addon-jsx": "^7.1.2",
     "webpack": "^4.32.2"
   },
   "scripts": {
@@ -12,7 +16,8 @@
     "start": "webpack --watch",
     "build": "webpack",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
@@ -22,16 +27,19 @@
     "@babel/plugin-transform-react-jsx": "^7.3.0",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^5.0.11",
+    "@storybook/addon-info": "^5.1.1",
+    "@storybook/addon-links": "^5.0.11",
+    "@storybook/addons": "^5.0.11",
+    "@storybook/react": "^5.0.11",
+    "@storybook/storybook-deployer": "^2.8.1",
     "babel-loader": "^8.0.6",
+    "bootstrap": "^4.3.1",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.13.1",
-    "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.9",
     "react-dom": "^16.8.6",
-    "webpack-cli": "^3.3.2",
-    "@storybook/react": "^5.0.11",
-    "@storybook/addon-actions": "^5.0.11",
-    "@storybook/addon-links": "^5.0.11",
-    "@storybook/addons": "^5.0.11"
+    "webpack-cli": "^3.3.2"
   },
   "peerDependencies": {
     "react": "^16.8.6",

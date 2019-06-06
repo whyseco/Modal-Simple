@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "../Modal";
 
-class First extends React.Component {
+class SimpleCustom extends React.Component {
   render() {
     return (
       <Modal
@@ -22,4 +22,4 @@ class First extends React.Component {
   }
 }
 
-export default First;
+export default SimpleCustom;

@@ -122,12 +122,18 @@ Modal.propTypes = {
     text: PropTypes.string,
     className: PropTypes.string
   }),
+  open: PropTypes.shape({
+    text: PropTypes.string,
+    className: PropTypes.string,
+    variant: PropTypes.string
+  }),
   bodyText: PropTypes.string,
   closeBtn: PropTypes.shape({
     show: PropTypes.bool,
     className: PropTypes.string
   }),
   children: PropTypes.node,
+  footer: PropTypes.bool,
   className: PropTypes.shape({
     header: PropTypes.string,
     body: PropTypes.string,
@@ -147,7 +153,6 @@ Modal.defaultProps = {
     body: "body-block",
     footer: "footer-block"
   },
-  header: { className: "title" },
   closeBtn: { show: true, className: "btn-close" },
   footer: true
 };

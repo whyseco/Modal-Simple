@@ -1,9 +1,9 @@
 import React from "react";
 import Modal from "../Modal";
 import logo from "./logo.svg";
-import "./App.scss";
+import "./HardCustom.scss";
 
-class App extends React.Component {
+class HardCustom extends React.Component {
   state = { show: false };
   modalState = () => {
     this.setState({ show: !this.state.show });
@@ -21,7 +21,7 @@ class App extends React.Component {
           title={{ text: "title", className: "title" }}
           closeBtn={{ show: true, className: "btn-close" }}
           className={{
-            modal: "modal-block-App",
+            modal: "modal-block-hard-custom",
             header: "header-block",
             body: "body-block",
             footer: "footer-block"
@@ -52,4 +52,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default HardCustom;

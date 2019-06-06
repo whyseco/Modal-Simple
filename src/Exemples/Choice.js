@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import App from "./App";
-import First from "./First";
-import Second from "./Second";
+import HardCustom from "./HardCustom";
+import SimpleCustom from "./SimpleCustom";
+import SimpleUse from "./SimpleUse";
 
 export default class Choice extends Component {
   render() {
     return (
       <div>
-        <App />
-        <First />
-        <Second />
+        <HardCustom />
+        <SimpleCustom />
+        <SimpleUse />
       </div>
     );
   }

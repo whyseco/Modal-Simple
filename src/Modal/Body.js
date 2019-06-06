@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Modal as ModalBoot } from "react-bootstrap";
+import PropTypes from "prop-types";
 
 export default class Body extends Component {
   static displayName = {
@@ -19,3 +20,7 @@ export default class Body extends Component {
     return this.renderContent();
   }
 }
+Body.propTypes = {
+  content: PropTypes.node,
+  children: PropTypes.node
+};
