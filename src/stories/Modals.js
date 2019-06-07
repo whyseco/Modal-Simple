@@ -35,50 +35,43 @@ class Modal extends React.Component {
   handleShow = () => {
     this.setState({ show: !this.state.show });
   };
+
   getProps = () => {
+    let result = {};
     let render = {};
     if (this.props.children && this.props.children.length) {
       this.props.children.map((child, idx) => {
-        switch (typeof child.type) {
-          case "function":
-            if (
-              child.type.displayName.name === "Body" ||
-              child.type.displayName === "Modal.Body"
-            ) {
-              render.bodyContent = child;
-            } else if (
-              child.type.displayName.name === "Footer" ||
-              child.type.displayName === "Modal.Footer"
-            ) {
-              render.footerContent =
-                child || (this.props.cancel && this.props.validate);
-            }
-            break;
-          default:
-            render.content = child;
-            break;
-        }
+        return (result = this.checkType(child, render));
       });
     } else {
       if (this.props.children) {
-        switch (typeof this.props.children.type) {
-          case "function":
-            if (this.props.children.type.displayName.name === "Body") {
-              render.bodyContent = this.props.children;
-            } else if (this.props.children.type.displayName.name === "Footer") {
-              render.footerContent =
-                this.props.children ||
-                (this.props.cancel && this.props.validate);
-            }
-            break;
-          default:
-            render.content = this.props.children;
-            break;
-        }
+        return (result = this.checkType(this.props.children, render));
       }
     }
-    return render;
+    return result;
   };
+
+  checkType = (child, render) => {
+    if (child) {
+      switch (typeof child.type) {
+        case "function":
+          if (child.type.displayName.name === "Body"||
+          child.type.displayName === "Modal.Body") {
+            render.bodyContent = child;
+          } else if (child.type.displayName.name === "Footer"||
+          child.type.displayName === "Modal.Footer") {
+            render.footerContent =
+              child || (this.props.cancel && this.props.validate);
+          }
+          break;
+        default:
+          render.content = child;
+          break;
+      }
+      return render;
+    }
+  };
+
   render() {
     const render = this.getProps();
     return (
