@@ -6,7 +6,7 @@ The modal is based on bootstrap.
 ## Installation
 
 ```
-    npm i modal-simple react-bootstrap bootstrap
+    npm i modal-simple react-bootstrap 
 ```
 
 and don't forget to add the bootstrap's stylesheet `<link>` into your `<head>` before all other stylesheets to load CSS :

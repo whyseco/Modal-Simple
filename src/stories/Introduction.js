@@ -40,11 +40,11 @@ export default function Introduction() {
         <div className="content">
           <h4>Install with npm or yarn : </h4>
           <br />
-          <code> npm i modal-simple react-bootstrap bootstrap</code>
+          <code> npm i modal-simple react-bootstrap</code>
           <br />
           or
           <br />
-          <code> yarn add modal-simple react-bootstrap bootstrap</code>
+          <code> yarn add modal-simple react-bootstrap</code>
         </div>
       </div>
       <div className="prerequisite paragraph">
