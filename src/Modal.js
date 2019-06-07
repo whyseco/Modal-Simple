@@ -1,4 +1,3 @@
-/* eslint-disable array-callback-return */
 import React, { Component } from "react";
 import Header from "./Modal/Header";
 import Body from "./Modal/Body";
@@ -12,6 +11,7 @@ class Modal extends Component {
   static Body = Body;
   static Footer = Footer;
   state = { show: false };
+
   renderToggle = () => {
     if (typeof this.props.show === "undefined") {
       return (
@@ -25,47 +25,45 @@ class Modal extends Component {
       );
     }
   };
+
   handleShow = () => {
     this.setState({ show: !this.state.show });
   };
+
   getProps = () => {
+    let result = {};
     let render = {};
     if (this.props.children && this.props.children.length) {
       this.props.children.map((child, idx) => {
-        switch (typeof child.type) {
-          case "function":
-            if (child.type.displayName.name === "Body") {
-              render.bodyContent = child;
-            } else if (child.type.displayName.name === "Footer") {
-              render.footerContent =
-                child || (this.props.cancel && this.props.validate);
-            }
-            break;
-          default:
-            render.content = child;
-            break;
-        }
+        return (result = this.checkType(child, render));
       });
     } else {
       if (this.props.children) {
-        switch (typeof this.props.children.type) {
-          case "function":
-            if (this.props.children.type.displayName.name === "Body") {
-              render.bodyContent = this.props.children;
-            } else if (this.props.children.type.displayName.name === "Footer") {
-              render.footerContent =
-                this.props.children ||
-                (this.props.cancel && this.props.validate);
-            }
-            break;
-          default:
-            render.content = this.props.children;
-            break;
-        }
+        return (result = this.checkType(this.props.children, render));
       }
     }
-    return render;
+    return result;
   };
+
+  checkType = (child, render) => {
+    if (child) {
+      switch (typeof child.type) {
+        case "function":
+          if (child.type.displayName.name === "Body") {
+            render.bodyContent = child;
+          } else if (child.type.displayName.name === "Footer") {
+            render.footerContent =
+              child || (this.props.cancel && this.props.validate);
+          }
+          break;
+        default:
+          render.content = child;
+          break;
+      }
+      return render;
+    }
+  };
+
   render() {
     const render = this.getProps();
     return (
@@ -91,15 +89,12 @@ class Modal extends Component {
               bodyText={this.props.bodyText}
             />
           )}
-
           {(render.content || this.props.bodyText) && (
-            <Body
-              className={this.props.className.body}
-              content={render.content || this.props.bodyText}
-            />
+            <Body className={this.props.className.body}>
+              {render.content || this.props.bodyText}
+            </Body>
           )}
           {render.bodyContent}
-
           {(render.footerContent || this.props.footer) && (
             <Footer
               footer={this.props.footer}
