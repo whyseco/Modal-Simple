@@ -1,6 +1,6 @@
 import { configure, addParameters, setAddon } from "@storybook/react";
 import JSXAddon from "storybook-addon-jsx";
-import "bootstrap/dist/css/bootstrap.css";
+import "../src/stories/bootstrap.css";
 
 setAddon(JSXAddon);
 
