@@ -1,6 +1,6 @@
 import React from "react";
 
-import { storiesOf, setAddon } from "@storybook/react";
+import { storiesOf } from "@storybook/react";
 import { withKnobs, boolean, text } from "@storybook/addon-knobs";
 import { withInfo } from "@storybook/addon-info";
 
@@ -55,11 +55,15 @@ class Modal extends React.Component {
     if (child) {
       switch (typeof child.type) {
         case "function":
-          if (child.type.displayName.name === "Body"||
-          child.type.displayName === "Modal.Body") {
+          if (
+            child.type.displayName.name === "Body" ||
+            child.type.displayName === "Modal.Body"
+          ) {
             render.bodyContent = child;
-          } else if (child.type.displayName.name === "Footer"||
-          child.type.displayName === "Modal.Footer") {
+          } else if (
+            child.type.displayName.name === "Footer" ||
+            child.type.displayName === "Modal.Footer"
+          ) {
             render.footerContent =
               child || (this.props.cancel && this.props.validate);
           }
@@ -99,10 +103,9 @@ class Modal extends React.Component {
           )}
 
           {(render.content || this.props.bodyText) && (
-            <Body
-              className={this.props.className.body}
-              content={render.content || this.props.bodyText}
-            />
+            <Body className={this.props.className.body}>
+              {render.content || this.props.bodyText}
+            </Body>
           )}
           {render.bodyContent}
 
@@ -174,6 +177,11 @@ const store = new Store({
 
 storiesOf("Modal", module)
   .addDecorator(withKnobs)
+  .addParameters({
+    props: {
+      propTablesExclude: [State, "Story"]
+    }
+  })
   .addDecorator(
     withInfo({
       header: false,
@@ -191,7 +199,7 @@ storiesOf("Modal", module)
     ),
     {
       props: {
-        propDefinitions:["Test","string"]
+        propDefinitions: ["Test", "string"]
       }
     }
   )
