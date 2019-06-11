@@ -49,11 +49,13 @@ class Modal extends Component {
     if (child) {
       switch (typeof child.type) {
         case "function":
-          if (child.type.displayName.name === "Body") {
+          if (child.type.displayName === "Modal.Body") {
             render.bodyContent = child;
-          } else if (child.type.displayName.name === "Footer") {
-            render.footerContent =
-              child || (this.props.cancel && this.props.validate);
+          } else if (child.type.displayName === "Modal.Footer") {
+            render.footerContent = {
+              cancel: child.props.cancel,
+              validate: child.props.validate
+            };
           }
           break;
         default:
@@ -100,8 +102,15 @@ class Modal extends Component {
               footer={this.props.footer}
               onHide={this.props.onHide || this.handleShow}
               className={this.props.className.footer}
-              footerContent={
-                render.footerContent ? render.footerContent.props : null
+              cancel={
+                render.footerContent
+                  ? render.footerContent.cancel
+                  : this.props.cancel
+              }
+              validate={
+                render.footerContent
+                  ? render.footerContent.validate
+                  : this.props.validate
               }
             />
           )}

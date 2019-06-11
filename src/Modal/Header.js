@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import { Modal as ModalBoot } from "react-bootstrap";
 
 export default class Header extends Component {
-  static displayName = {
-    name: "Header"
-  };
+  static displayName = "Modal.Header";
+
   renderCloseButton = () => {
     return (
       <button

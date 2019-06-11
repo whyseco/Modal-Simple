@@ -4,28 +4,26 @@ import { Button } from "react-bootstrap";
 import PropTypes from "prop-types";
 
 class Footer extends Component {
-  static displayName = {
-    name: "Footer"
-  };
+  static displayName = "Modal.Footer";
 
   renderButtons = () => {
     var cancel;
     var validate;
-    if (!this.props.footerContent) {
+    if (this.props.cancel.defaultProp && this.props.validate.defaultProp) {
       cancel = this.props.cancel;
       validate = this.props.validate;
       return this.showButtons(cancel, validate);
     }
-    if (this.props.footerContent.cancel || this.props.footerContent.validate) {
-      if (this.props.footerContent.cancel.defaultProp) {
+    if (this.props.cancel || this.props.validate) {
+      if (this.props.cancel.defaultProp) {
         cancel = false;
       } else {
-        cancel = this.props.footerContent.cancel;
+        cancel = this.props.cancel;
       }
-      if (this.props.footerContent.validate.defaultProp) {
+      if (this.props.validate.defaultProp) {
         validate = false;
       } else {
-        validate = this.props.footerContent.validate;
+        validate = this.props.validate;
       }
 
       return this.showButtons(cancel, validate);
