@@ -15,12 +15,21 @@ export default class Header extends Component {
       </button>
     );
   };
-  render() {
-    return (
-      <ModalBoot.Header className={this.props.className}>
+  renderHeader = () => {
+    if (this.props.children) {
+      return this.props.children;
+    } else {
+      return (
         <ModalBoot.Title className={this.props.title.className}>
           {this.props.title.text}
         </ModalBoot.Title>
+      );
+    }
+  };
+  render() {
+    return (
+      <ModalBoot.Header className={this.props.className}>
+        {this.renderHeader()}
         {this.props.closeBtn.show ? this.renderCloseButton() : null}
       </ModalBoot.Header>
     );
