@@ -68,7 +68,6 @@ and don't forget to add the bootstrap's stylesheet `<link>` into your `<head>` b
             <Modal
                 show = {this.state.show}
                 onHide = {this.modalState}
-                title = {{ text: "title", className: "title" }}
                 closeBtn = {{ show: true, className: "btn-close" }}
                 className = {{
                     modal: "modal-block-App",
@@ -76,7 +75,9 @@ and don't forget to add the bootstrap's stylesheet `<link>` into your `<head>` b
                     body: "body-block",
                     footer: "footer-block"
                 }}
-            >
+                <Modal.Header>
+                    <h1 className='title'>Hard Custom</h1>
+                </Modal.Header>
                 <Modal.Body>
                     <div className="d-flex flex-row body-block">
                         <img src={logo} alt="logo"/>

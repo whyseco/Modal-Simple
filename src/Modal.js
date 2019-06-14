@@ -51,6 +51,8 @@ class Modal extends Component {
         case "function":
           if (child.type.displayName === "Modal.Body") {
             render.bodyContent = child;
+          }else if (child.type.displayName === "Modal.Header") {
+            render.header = child.props.children;
           } else if (child.type.displayName === "Modal.Footer") {
             render.footerContent = {
               cancel: child.props.cancel,
@@ -76,7 +78,7 @@ class Modal extends Component {
           onHide={this.props.onHide || this.handleShow}
           className={this.props.className.modal}
         >
-          {this.props.title && (
+          {(render.header||this.props.title) && (
             <Header
               className={this.props.className.header}
               title={{
@@ -89,7 +91,7 @@ class Modal extends Component {
               }}
               onHide={this.props.onHide || this.handleShow}
               bodyText={this.props.bodyText}
-            />
+              >{render.header}</Header>
           )}
           {(render.content || this.props.bodyText) && (
             <Body className={this.props.className.body}>

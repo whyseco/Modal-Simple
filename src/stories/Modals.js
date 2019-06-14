@@ -94,10 +94,6 @@ storiesOf("Modal", module)
             show: boolean("With the close button ", true),
             className: text("Add a class to the close button", "btn-close")
           }}
-          title={{
-            text: text("The title in the header", "title"),
-            className: text("Add a class to the header title", "title")
-          }}
           className={{
             modal: text(
               "If you need to,you can add a class to the modal container",
@@ -113,6 +109,9 @@ storiesOf("Modal", module)
             )
           }}
         >
+          <Modal.Header>
+          <h1 className={text("Add a class to the header title", "title")}>{text("The title in the header", "Hard Custom")}</h1>
+          </Modal.Header>
           <Modal.Body>
             <div
               className={text(

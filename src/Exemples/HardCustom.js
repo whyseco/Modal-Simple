@@ -18,7 +18,6 @@ class HardCustom extends React.Component {
         <Modal
           show={this.state.show}
           onHide={this.modalState}
-          title={{ text: "title", className: "title" }}
           closeBtn={{ show: true, className: "btn-close" }}
           className={{
             modal: "modal-block-hard-custom",
@@ -27,6 +26,9 @@ class HardCustom extends React.Component {
             footer: "footer-block"
           }}
         >
+          <Modal.Header>
+          <h1 className='title'>Hard Custom</h1>
+          </Modal.Header>
           <Modal.Body>
             <div className="d-flex flex-row body-block">
               <img src={logo} alt="logo" />
