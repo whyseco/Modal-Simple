@@ -7,7 +7,7 @@ import { withInfo } from "@storybook/addon-info";
 import Modal from "../Modal";
 import { State, Store } from "@sambego/storybook-state";
 import logo from "./logo.svg";
-import "../Exemples/HardCustom.scss";
+import "./HardCustom.scss";
 
 Modal.Header.displayName = "Modal.Header";
 Modal.Body.displayName = "Modal.Body";
@@ -94,6 +94,7 @@ storiesOf("Modal", module)
             show: boolean("With the close button ", true),
             className: text("Add a class to the close button", "btn-close")
           }}
+          dialogClassName={text("Add a class to modal-dialog","dialog-head")}
           className={{
             modal: text(
               "If you need to,you can add a class to the modal container",
@@ -140,3 +141,5 @@ storiesOf("Modal", module)
       </State>
     </div>
   ));
+
+  export default Modal;

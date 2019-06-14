@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Choice from './Exemples/Choice';
+import Modal from './Modal';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<Choice />, document.getElementById('root'));
+ReactDOM.render(<Modal />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

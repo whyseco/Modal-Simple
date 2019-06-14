@@ -77,9 +77,11 @@ class Modal extends Component {
           show={this.props.show || this.state.show}
           onHide={this.props.onHide || this.handleShow}
           className={this.props.className.modal}
+          dialogClassName={this.props.dialogClassName}
         >
           {(render.header||this.props.title) && (
             <Header
+            dialogClassName={this.props.dialogClassName}
               className={this.props.className.header}
               title={{
                 text: this.props.title ? this.props.title.text : null,
