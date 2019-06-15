@@ -51,7 +51,7 @@ class Modal extends Component {
         case "function":
           if (child.type.displayName === "Modal.Body") {
             render.bodyContent = child;
-          }else if (child.type.displayName === "Modal.Header") {
+          } else if (child.type.displayName === "Modal.Header") {
             render.header = child.props.children;
           } else if (child.type.displayName === "Modal.Footer") {
             render.footerContent = {
@@ -79,9 +79,8 @@ class Modal extends Component {
           className={this.props.className.modal}
           dialogClassName={this.props.dialogClassName}
         >
-          {(render.header||this.props.title) && (
+          {(render.header || this.props.title) && (
             <Header
-            dialogClassName={this.props.dialogClassName}
               className={this.props.className.header}
               title={{
                 text: this.props.title ? this.props.title.text : null,
@@ -93,7 +92,9 @@ class Modal extends Component {
               }}
               onHide={this.props.onHide || this.handleShow}
               bodyText={this.props.bodyText}
-              >{render.header}</Header>
+            >
+              {render.header}
+            </Header>
           )}
           {(render.content || this.props.bodyText) && (
             <Body className={this.props.className.body}>

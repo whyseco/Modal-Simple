@@ -94,7 +94,7 @@ storiesOf("Modal", module)
             show: boolean("With the close button ", true),
             className: text("Add a class to the close button", "btn-close")
           }}
-          dialogClassName={text("Add a class to modal-dialog","dialog-head")}
+          dialogClassName={text("Add a class to modal-dialog", "dialog-head")}
           className={{
             modal: text(
               "If you need to,you can add a class to the modal container",
@@ -111,7 +111,9 @@ storiesOf("Modal", module)
           }}
         >
           <Modal.Header>
-          <h1 className={text("Add a class to the header title", "title")}>{text("The title in the header", "Hard Custom")}</h1>
+            <h1 className={text("Add a class to the header title", "title")}>
+              {text("The title in the header", "Hard Custom")}
+            </h1>
           </Modal.Header>
           <Modal.Body>
             <div
@@ -142,4 +144,4 @@ storiesOf("Modal", module)
     </div>
   ));
 
-  export default Modal;
+export default Modal;
