@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/veensy/Modal-Simple/main.css",
+    "main.js": "/veensy/Modal-Simple/main.009b8e07386aa42a9dcf.bundle.js",
+    "main.css.map": "/veensy/Modal-Simple/main.css.map",
+    "main.js.map": "/veensy/Modal-Simple/main.009b8e07386aa42a9dcf.bundle.js.map",
+    "runtime~main.js": "/veensy/Modal-Simple/runtime~main.009b8e07386aa42a9dcf.bundle.js",
+    "runtime~main.js.map": "/veensy/Modal-Simple/runtime~main.009b8e07386aa42a9dcf.bundle.js.map",
+    "vendors~main.css": "/veensy/Modal-Simple/vendors~main.css",
+    "vendors~main.js": "/veensy/Modal-Simple/vendors~main.009b8e07386aa42a9dcf.bundle.js",
+    "vendors~main.css.map": "/veensy/Modal-Simple/vendors~main.css.map",
+    "vendors~main.js.map": "/veensy/Modal-Simple/vendors~main.009b8e07386aa42a9dcf.bundle.js.map",
+    "iframe.html": "/veensy/Modal-Simple/iframe.html",
+    "precache-manifest.4d012c670f6e2c871ec51718da8aa3a8.js": "/veensy/Modal-Simple/precache-manifest.4d012c670f6e2c871ec51718da8aa3a8.js",
+    "service-worker.js": "/veensy/Modal-Simple/service-worker.js",
+    "static/media/logo.svg": "/veensy/Modal-Simple/static/media/logo.5d5d9eef.svg"
+  }
+}
