@@ -1,6 +1,6 @@
 {
   "name": "modal-simple",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "dependencies": {
     "react-scripts": "3.0.1",
     "webpack": "^4.32.2"
