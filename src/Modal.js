@@ -70,7 +70,6 @@ class Modal extends Component {
   getDialog=()=>{}
 
   render() {
-    console.log(document.getElementsByClassName(".modal-dialog"))
     const render = this.getProps();
     return (
       <div>
@@ -80,7 +79,6 @@ class Modal extends Component {
           onHide={this.props.onHide || this.handleShow}
           className={this.props.className.modal}
           dialogClassName={this.props.dialogClassName}
-          aria-labelledby="example-custom"
         >
           {(render.header || this.props.title) && (
             <Header
