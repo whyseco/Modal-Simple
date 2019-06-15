@@ -79,7 +79,7 @@ class Modal extends Component {
           className={this.props.className.modal}
           dialogClassName={this.props.dialogClassName}
         >
-          <ModalBoot.Dialog className={this.props.dialogClassName}>
+          <ModalBoot.Dialog dialogClassName={this.props.dialogClassName}>
           {(render.header || this.props.title) && (
             <Header
               className={this.props.className.header}
